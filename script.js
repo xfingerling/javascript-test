@@ -1,6 +1,18 @@
-"use strict"  
+"use strict";
 
-let userAge = prompt("Сколько тебе лет?");
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+}
 
-alert(`Тебе ${userAge} лет`);
-alert("Бля, от тебя гавной воняет, закрой эту вкладку");
+class Rabbit extends Animal {
+  constructor(name) {
+    super();
+    this.name = name;
+    this.created = Date.now();
+  }
+}
+
+let rabbit = new Rabbit("Белый кролик"); // Error: this is not defined
+alert(rabbit.name);
