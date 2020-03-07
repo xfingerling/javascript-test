@@ -7,40 +7,102 @@
     <link rel="stylesheet" href="./styles.css" />
     <title>Document</title>
   </head>
-  <body onload="show_text();">
-    <p style="display:none" id="pageTextSource">Ты пидор!!!</p>
+  <body>
+    <ul class="accordion-list">
+      <li class="accordion-list__item">
+        <button class="accordion-list__btn">Click Me</button>
+        <div class="accordion-list__wrapper">
+          <img
+            class="accordion-list__img"
+            src="https://placeimg.com/640/480/any?t=1583431669568"
+            alt=""
+          />
+          <p class="accordion-list__desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis,
+            harum.
+          </p>
+        </div>
+      </li>
+      <li class="accordion-list__item">
+        <button class="accordion-list__btn">Click Me</button>
+        <div class="accordion-list__wrapper">
+          <img
+            class="accordion-list__img"
+            src="https://placeimg.com/640/480/any?t=1583431669868"
+            alt=""
+          />
+          <p class="accordion-list__desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis,
+            harum.
+          </p>
+        </div>
+      </li>
+      <li class="accordion-list__item">
+        <button class="accordion-list__btn">Click Me</button>
+        <div class="accordion-list__wrapper">
+          <img
+            class="accordion-list__img"
+            src="https://placeimg.com/640/480/any?t=1583431469568"
+            alt=""
+          />
+          <p class="accordion-list__desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis,
+            harum.
+          </p>
+        </div>
+      </li>
+      <li class="accordion-list__item">
+        <button class="accordion-list__btn">Click Me</button>
+        <div class="accordion-list__wrapper">
+          <img
+            class="accordion-list__img"
+            src="https://placeimg.com/640/480/any?t=1583436669568"
+            alt=""
+          />
+          <p class="accordion-list__desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis,
+            harum.
+          </p>
+        </div>
+      </li>
+    </ul>
 
-    <p id="pageText"></p>
-    <script>
-      const isTrue = confirm("Хочешь узнать правду???");
-      if (isTrue) {
-        var source,
-          dest,
-          len,
-          now = 0,
-          delay = 300,
-          letters = 1;
+    <div class="gallery">
+      <div class="gallery__wrapper">
+        <img
+          src="https://placeimg.com/640/480/any?t=1583426669568"
+          alt=""
+          class="gallery__img filter"
+        />
+        <div class="gallery__filter"></div>
+      </div>
+      <div class="gallery__wrapper">
+        <img
+          src="https://placeimg.com/640/480/any?t=1583436662568"
+          alt=""
+          class="gallery__img filter"
+        />
+        <div class="gallery__filter"></div>
+      </div>
+      <div class="gallery__wrapper">
+        <img
+          src="https://placeimg.com/640/480/any?t=1583436669528"
+          alt=""
+          class="gallery__img filter"
+        />
+        <div class="gallery__filter"></div>
+      </div>
+      <div class="gallery__wrapper">
+        <img
+          src="https://placeimg.com/640/480/any?t=1583436669568"
+          alt=""
+          class="gallery__img filter"
+        />
+        <div class="gallery__filter"></div>
+      </div>
+    </div>
 
-        function show_text() {
-          source = document.getElementById("pageTextSource");
-
-          dest = document.getElementById("pageText");
-
-          len = source.innerHTML.length;
-
-          show();
-        }
-
-        function show() {
-          dest.innerHTML += source.innerHTML.substr(now, letters);
-
-          now += letters;
-
-          if (now < len) setTimeout("show()", delay);
-        }
-      } else {
-        alert("Да ладно тебе! Перезагрузи страничку");
-      }
-    </script>
+    <script src="./accordion.js" type="module"></script>
+    <script src="./gallery.js"></script>
   </body>
 </html>
